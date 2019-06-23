@@ -4,8 +4,7 @@ install() {
 wget "https://valtman.name/files/telegram-cli-1222"
 mv telegram-cli-1222 tg
 sudo chmod +x tg
-echo -e "
-          "
+echo -e ""
 echo -e "" 
 echo -e "" 
 }
