@@ -10439,7 +10439,7 @@ tdcli_function ({   ID = "GetMessage", chat_id_ = data.chat_id_,   message_id_ =
 elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then  
 local filess = io.open("plugins_/help_rep.lua","r")
 if not filess then
-os.execute('cd plugins_ ;wget https://raw.githubusercontent.com/sorues/IRAQQ/master/plugins_/help_rep.lua')
+os.execute('cd plugins_ ;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/help_rep.lua')
 end
 local filess = io.open("requfiles/JSON.lua","r")
 if not filess then
