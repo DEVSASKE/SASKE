@@ -10439,21 +10439,21 @@ tdcli_function ({   ID = "GetMessage", chat_id_ = data.chat_id_,   message_id_ =
 elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then  
 local filess = io.open("plugins_/help_rep.lua","r")
 if not filess then
-os.execute('cd plugins_ ;wget https://raw.githubusercontent.com/surse/IRAQ/master/plugins_/help_rep.lua')
+os.execute('cd plugins_ ;wget https://raw.githubusercontent.com/sorues/IRAQQ/master/plugins_/help_rep.lua')
 end
 local filess = io.open("requfiles/JSON.lua","r")
 if not filess then
-os.execute('cd requfiles ;wget https://raw.githubusercontent.com/surse/IRAQQ/master/requfiles/JSON.lua') 
+os.execute('cd requfiles ;wget https://raw.githubusercontent.com/sorues/IRAQQ/master/requfiles/JSON.lua') 
 dofile('IRAQ.lua')  
 end
 local filess = io.open("requfiles/dkjson.lua","r")
 if not filess then
-os.execute('cd requfiles ;wget https://raw.githubusercontent.com/surse/IRAQQ/master/requfiles/dkjson.lua') 
+os.execute('cd requfiles ;wget https://raw.githubusercontent.com/sorues/IRAQQ/master/requfiles/dkjson.lua') 
 dofile('IRAQ.lua')  
 end
 local filess = io.open("requfiles/serpent.lua","r")
 if not filess then
-os.execute('cd requfiles ;wget https://raw.githubusercontent.com/surse/IRAQQ/master/requfiles/serpent.lua') 
+os.execute('cd requfiles ;wget https://raw.githubusercontent.com/sorues/IRAQQ/master/requfiles/serpent.lua') 
 dofile('IRAQ.lua')  
 end
 local list = IRAQBOT:smembers(IRAQ_ID.."usersbot")
