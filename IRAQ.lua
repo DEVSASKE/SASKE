@@ -956,7 +956,7 @@ end
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,TextS..TextE, 1, 'md') 
 end
 else
-storm_sendMsg(msg.chat_id_, msg.id_, 1,"📮¦ لا يوجد اتصال من ال api \n", 1, 'md') 
+IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,"📮¦ لا يوجد اتصال من ال api \n", 1, 'md') 
 end
 return false
 end
