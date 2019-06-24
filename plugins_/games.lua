@@ -1,5 +1,5 @@
 --[[
-الالعاب ل سورس الزعيم
+
 --]]
 local function games(msg,MsgText)
 if msg.type ~= "pv" then
