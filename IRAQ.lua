@@ -930,7 +930,79 @@ IRAQBOT:del("klish:welc"..bot_id)
 IRAQBOT:del("addreply1photo1"..bot_id)   
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'*📮¦ تم مسح كليشه ترحيب عند اضافه البوت *\n', 1, 'md') 
 end
+if text == "متجر الملفات" or text == 'المتجر' then
+if not is_devtaha(msg) then  
+IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'*📮¦ هاذا الامر خاص بالمطور الاساسي *\n', 1, 'md') 
+return false
+end
+local Get_Files, res = https.request("https://raw.githubusercontent.com/sorues/IRAQ/master/getfile.json")
+if res == 200 then
+local Get_info, res = pcall(JSON.decode,Get_Files);
+if Get_info then
+local TextS = "\n📂¦ اهلا بك في متجر الملفات \n📮¦ الملفات الموجوده حاليا \n ٴ━━━━━━━━━━━━\n\n"
+local TextE = "\nٴ━━━━━━━━━━━━\n📌¦ تدل علامة (✔) الملف مفعل\n".."📌¦ تدل علامة (✖) الملف معطل\n"
+local NumFile = 0
+for name in pairs(res.plugins_) do
+local Check_File_is_Found = io.open("plugins_/"..name,"r")
+if Check_File_is_Found then
+io.close(Check_File_is_Found)
+CeckFile = "(✔)"
+else
+CeckFile = "(✖)"
+end
+NumFile = NumFile + 1
+TextS = TextS..NumFile.."• `"..name..'` » '..CeckFile..'\n'
+end
+IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,TextS..TextE, 1, 'md') 
+end
+else
+storm_sendMsg(msg.chat_id_, msg.id_, 1,"📮¦ لا يوجد اتصال من ال api \n", 1, 'md') 
+end
+return false
+end
 
+if text and text:match('تعطيل ملف (.*)') and is_devtaha(msg) then  
+local file = text:match('تعطيل ملف (.*)')
+local file_bot = io.open("plugins_/"..file,"r")
+if file_bot then
+io.close(file_bot)
+t = "*🗂¦ الملف » {"..file.."}\n📬¦ تم تعطيله وحذفه بنجاح \n✓*"
+else
+t = "*📬¦ بالتاكيد تم تعطيل وحذف ملف » {"..file.."} \n✓*"
+end
+local json_file, res = https.request("https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/"..file)
+if res == 200 then
+os.execute("rm -fr plugins_/"..file)
+IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md') 
+load_plugins()
+dofile('IRAQ.lua')  
+else
+IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,"*📮¦ عذرا لا يوجد هاكذا ملف في المتجر *\n", 1, 'md') 
+end
+return false
+end
+if text and text:match('تفعيل ملف (.*)') and is_devtaha(msg) then  
+local file = text:match('تفعيل ملف (.*)')
+local file_bot = io.open("plugins_/"..file,"r")
+if file_bot then
+io.close(file_bot)
+t = "*📬¦ بالتاكيد تم تنزيل وتفعيل ملف » {"..file.."} \n✓*"
+else
+t = "*🗂¦ الملف » {"..file.."}\n📬¦ تم تنزيله وتفعيله بنجاح \n💥*"
+end
+local json_file, res = https.request("https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/"..file)
+if res == 200 then
+local chek = io.open("plugins_/"..file,'w+')
+chek:write(json_file)
+chek:close()
+IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md') 
+load_plugins()
+dofile('IRAQ.lua')  
+else
+IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,"*📮¦ عذرا لا يوجد هاكذا ملف في المتجر *\n", 1, 'md') 
+end
+return false
+end
 if text == 'تحديث' and is_devtaha(msg) then  
 dofile('IRAQ.lua')  
 load_plugins()
