@@ -2078,7 +2078,6 @@ os.execute('wget https://raw.githubusercontent.com/sorues/IRAQ/master/IRAQ.lua')
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/help_rep.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/ZHRFA.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/games.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/games.lua') 
 sleep(0.5) 
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, '🚸*¦* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('IRAQ.lua')  
@@ -4316,7 +4315,6 @@ os.execute('wget https://raw.githubusercontent.com/sorues/IRAQ/master/IRAQ.lua')
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/help_rep.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/ZHRFA.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/games.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/games.lua') 
 sleep(0.5) 
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, '🚸*¦* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('IRAQ.lua')  
@@ -4973,7 +4971,7 @@ if tonumber(result.id_) == tonumber(bot_id) then
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, 'انجب حبي شون اهين نفسي \n ', 1, 'md')  
 return false  end  
 if tonumber(result.id_) == tonumber(SUDO) then  
-IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, ' انجب لك شون اهين مطوري \n ', 1, 'md')  
+storm_sendMsg(msg.chat_id_, msg.id_, 1, ' انجب لك شون اهين مطوري \n ', 1, 'md')  
 return false  end  
 local taha = { 
 "تعال لك @"..username.." ابو البنات ابو الوصخ ",
