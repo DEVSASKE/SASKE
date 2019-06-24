@@ -408,5 +408,15 @@ IRAQ = {
 "^(روليت)$", 
 "^(قائمه الالعاب)$", 
  },
- iIRAQ = games,
- dIRAQ = procces,
+end
+end
+
+return {
+CMDS = {
+"^(العاب)$",
+"^(الالعاب)$",
+"^(تفعيل الالعاب)$",
+"^(تعطيل الالعاب)$",
+},
+IRAQ = games,
+IRAQ_TEXT = GET_TEXT
