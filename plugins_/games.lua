@@ -781,6 +781,7 @@ IRAQ = {
 "^(روليت)$",
 "^(قائمه الالعاب)$",
  },
- iIRAQ = games,
- dIRAQ = procces,
- }
+IRAQ = zhrfa,
+IRAQ_TEXT = GET_TEXT
+}
+
