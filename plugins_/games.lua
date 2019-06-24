@@ -14,7 +14,7 @@ end
 end
 if MsgText[1] == "تعطيل" and MsgText[2] == "الالعاب" or MsgText[2] == "اللعبه" or MsgText[2] == "اللعبة" then
 if not msg.Admin then return "📛*¦* هذا الامر يخص {الادمن,المدير,المنشئ,المطور} فقط  \n🚶" end
-if redis:get(boss..'lock_geams'..msg.chat_id_) then 
+if redis:get(IRAQ..'lock_geams'..msg.chat_id_) then 
 return "🙋🏼‍♂️*¦* أهلا عزيزي "..msg.TheRankCmd.."\n📡*¦* الالعاب بالتأكيد معطله\n✓" 
 else
 redis:set(IRAQ..'lock_geams'..msg.chat_id_,true)  
@@ -356,19 +356,19 @@ redis:set(IRAQ.."GAME:CHER"..msg.chat_id_,'10')
 elseif SENDTEXT:find('النمل') then
 redis:set(IRAQ.."GAME:CHER"..msg.chat_id_,'النمل') 
 elseif SENDTEXT:find('حرف الواو') then
-redis:set(boss.."GAME:CHER"..msg.chat_id_,'حرف الواو') 
+redis:set(IRAQ.."GAME:CHER"..msg.chat_id_,'حرف الواو') 
 elseif SENDTEXT:find('الشعر') then
 redis:set(IRAQ.."GAME:CHER"..msg.chat_id_,'الشعر') 
 elseif SENDTEXT:find('ابراهيم') then
-redis:set(boss.."GAME:CHER"..msg.chat_id_,'ابراهيم') 
+redis:set(IRAQ.."GAME:CHER"..msg.chat_id_,'ابراهيم') 
 elseif SENDTEXT:find('سحاب') then
-redis:set(boss.."GAME:CHER"..msg.chat_id_,'سحاب') 
+redis:set(IRAQ.."GAME:CHER"..msg.chat_id_,'سحاب') 
 elseif SENDTEXT:find('الاسم') then
 redis:set(IRAQ.."GAME:CHER"..msg.chat_id_,'الاسم') 
 elseif SENDTEXT:find('ذهب') then
 redis:set(IRAQ.."GAME:CHER"..msg.chat_id_,'ذهب') 
 elseif SENDTEXT:find('حرف الام') then
-redis:set(boss.."GAME:CHER"..msg.chat_id_,'حرف الام') 
+redis:set(IRAQ.."GAME:CHER"..msg.chat_id_,'حرف الام') 
 elseif SENDTEXT:find('العزائم') then
 redis:set(IRAQ.."GAME:CHER"..msg.chat_id_,'العزائم') 
 elseif SENDTEXT:find('انسات') then
@@ -403,7 +403,7 @@ return false
 end
 if MsgText[1] == 'محيبس' or MsgText[1] == 'بات' then   
 Num = math.random(1,6)
-redis:set(boss.."GAMES"..msg.chat_id_,Num) 
+redis:set(IRAQ.."GAMES"..msg.chat_id_,Num) 
 TEST = [[
 *➀       ➁     ➂      ➃      ➄     ➅
 ↓      ↓     ↓      ↓     ↓     ↓
@@ -440,7 +440,7 @@ end
 if MsgText[1] == 'ترتيب' then
 katu = {'سحور','سياره','استقبال','قنفه','ايفون','بزونه','مطبخ','كرستيانو','دجاجه','مدرسه','الوان','غرفه','ثلاجه','كهوه','سفينه','العراق','محطه','طياره','رادار','منزل','مستشفى','كهرباء','تفاحه','اخطبوط','سلمون','فرنسا','برتقاله','تفاح','مطرقه','بتيته','لهانه','شباك','باص','سمكه','ذباب','تلفاز','حاسوب','انترنيت','ساحه','جسر'};
 name = katu[math.random(#katu)]
-redis:set(boss..':Set_Arg:'..msg.chat_id_,name)
+redis:set(IRAQ..':Set_Arg:'..msg.chat_id_,name)
 name = string.gsub(name,'سحور','س ر و ح')
 name = string.gsub(name,'سياره','ه ر س ي ا')
 name = string.gsub(name,'استقبال','ل ب ا ت ق س ا')
@@ -657,7 +657,7 @@ if tonumber(msg.text:match("^(%d+)$")) > 50000 then
 sendMsg(msg.chat_id_,msg.id_,"*📬¦ لا تستطيع اضافة اكثر من 50000 رساله\n*")   
 redis:del(IRAQ.."SETEX:MSG"..msg.chat_id_..""..msg.sender_user_id_)  
 return false  end 
-local GET_IDUSER = redis:get(boss..'SET:ID:USER'..msg.chat_id_)  
+local GET_IDUSER = redis:get(IRAQ..'SET:ID:USER'..msg.chat_id_)  
 sendMsg(msg.chat_id_,msg.id_,"\n📬*¦ روح خالي 😉 تم اضافة له { "..msg.text.." }* رساله")
 redis:incrby(IRAQ..'msgs:'..GET_IDUSER..':'..msg.chat_id_,msg.text)  
 end
@@ -669,7 +669,7 @@ if tonumber(msg.text:match("^(%d+)$")) > 1000 then
 sendMsg(msg.chat_id_,msg.id_,"*📬¦ لا تستطيع اضافة اكثر من 1000 نقطه\n*")   
 redis:del(IRAQ.."SETEX:NUM"..msg.chat_id_..""..msg.sender_user_id_)  
 return false  end 
-local GET_IDUSER = redis:get(boss..'SET:ID:USER:NUM'..msg.chat_id_)  
+local GET_IDUSER = redis:get(IRAQ..'SET:ID:USER:NUM'..msg.chat_id_)  
 sendMsg(msg.chat_id_,msg.id_,"\n📬*¦ طكو طكو عمي 😻 تم اضافة له { "..msg.text.." }* نقطه")
 redis:incrby(IRAQ..':User_Points:'..msg.chat_id_..GET_IDUSER,msg.text)  
 end
@@ -724,7 +724,7 @@ redis:incrby(IRAQ..':User_Points:'..msg.chat_id_..data.id_,5)
 sendMsg(msg.chat_id_,msg.id_,'*🔖¦ مبروك فزت ويانه وخمنت الرقم الصحيح\n🚸¦ تم اضافة { 5 } من النقاط *\n')
 elseif tonumber(NUM) ~= tonumber(GETNUM) then
 redis:incrby(IRAQ..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_,1)
-if tonumber(redis:get(boss..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)) >= 3 then
+if tonumber(redis:get(IRAQ..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)) >= 3 then
 redis:del(IRAQ..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)
 redis:del(IRAQ.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
 sendMsg(msg.chat_id_,msg.id_,'\n*📮¦ اوبس لقد خسرت في اللعبه \n📬¦ حظآ اوفر في المره القادمه \n🔰¦ كان الرقم الذي تم تخمينه { '..GETNUM..' }\n*')
