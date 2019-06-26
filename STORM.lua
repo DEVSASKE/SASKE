@@ -972,7 +972,7 @@ t = "*🗂¦ الملف » {"..file.."}\n📬¦ تم تعطيله وحذفه ب�
 else
 t = "*📬¦ بالتاكيد تم تعطيل وحذف ملف » {"..file.."} \n✓*"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/NOVAR1/NOVAR1/master/plugins_/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/"..file)
 if res == 200 then
 os.execute("rm -fr plugins_/"..file)
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md') 
@@ -2074,8 +2074,12 @@ if text ==('المجموعات 📇') and is_devtaha(msg) then    local list = t
 if text == "تحديث السورس 🔱" and is_devtaha(msg) then  IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, '♻ • جاري تحديث السورس • ♻', 1, 'md') 
 os.execute('rm -rf IRAQ.lua') 
 os.execute("rm -fr plugins_/help_rep.lua")
-os.execute('wget https://raw.githubusercontent.com/sorues/IRAQ/master/IRAQ.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/help_rep.lua') 
+os.execute("rm -fr plugins_/ZHRFA.lua")
+os.execute("rm -fr plugins_/games.lua")
+os.execute('wget https://raw.githubusercontent.com/surse/iraq/master/IRAQ.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/surse/iraq/master/plugins_/help_rep.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/surse/iraq/master/plugins_/ZHRFA.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/surse/iraq/master/plugins_/games.lua') 
 sleep(0.5) 
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, '🚸*¦* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('IRAQ.lua')  
@@ -4308,8 +4312,12 @@ if text == "تحديث السورس" and is_devtaha(msg) then
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, '♻ • جاري تحديث السورس • ♻', 1, 'md') 
 os.execute('rm -rf IRAQ.lua') 
 os.execute("rm -fr plugins_/help_rep.lua")
-os.execute('wget https://raw.githubusercontent.com/sorues/IRAQ/master/IRAQ.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/help_rep.lua') 
+os.execute("rm -fr plugins_/ZHRFA.lua")
+os.execute("rm -fr plugins_/games.lua")
+os.execute('wget https://raw.githubusercontent.com/surse/iraq/master/IRAQ.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/surse/iraq/master/plugins_/help_rep.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/surse/iraq/master/plugins_/ZHRFA.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/surse/iraq/master/plugins_/games.lua')
 sleep(0.5) 
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, '🚸*¦* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('IRAQ.lua')  
