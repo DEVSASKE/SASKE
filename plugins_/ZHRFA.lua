@@ -1732,9 +1732,6 @@ end
 end
 redis:set(IRAQ.."chencher"..msg.sender_user_id_, data.first_name_) 
 end,nil) 
-end
-
-
 
 end
 return {
@@ -1767,6 +1764,11 @@ CMDS = {
 "^(الالعاب)$",
 "^(تفعيل الالعاب)$",
 "^(تعطيل الالعاب)$",
+"^(زخرفه)$",
+"^(زخرف)$",
+"^(تفعيل الزخرفه)$",
+"^(تعطيل الزخرفه)$",
 },
-IRAQ = games,
+IRAQ = zhrfa,
 IRAQ_TEXT = GET_TEXT
+}
