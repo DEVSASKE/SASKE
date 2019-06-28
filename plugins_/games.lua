@@ -3,10 +3,10 @@
 --]]
 local function GET_TEXT(msg)
 if chat_type == 'super' then 
-if text == ''..(tahadevstorm:get(DEVIRAQ..'SMALE:GAME'..msg.chat_id_) or '')..'' and not tahadevstorm:get(DEVIRAQ..'SMALE:GAMES'..msg.chat_id_) then
+if text == ''..(tahadevIRAQ:get(DEVIRAQ..'SMALE:GAME'..msg.chat_id_) or '')..'' and not tahadevIRAQ:get(DEVIRAQ..'SMALE:GAMES'..msg.chat_id_) then
 tahadevIRAQ:incrby(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
 tahadevIRAQ:set(DEVIRAQ..'SMALE:GAMES'..msg.chat_id_,true)
-NUMPGAME = (tahadevstorm:get(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_))
+NUMPGAME = (tahadevIRAQ:get(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_))
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'*🎊¦ مبروك فزت 🍂\n🎁¦ اصبح عدد نقودك » { '..NUMPGAME..' }\n🎭¦* للعب مره اخرى ارسل `الاسرع` \n', 1, 'md')
 end 
 
