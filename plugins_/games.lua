@@ -34,7 +34,7 @@ return false  end
 local GET_IDUSER = tahadevIRAQ:get(DEVIRAQ..'SET:ID:USER'..msg.chat_id_)  
 taha = "\n📬*¦ روح خالي 😉 تم اضافة له { "..text:match("^(%d+)$").." }* رساله"
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
-tahadevIRAQ:incrby(DEVSTOR..'user:messages:'..msg.chat_id_..':'..GET_IDUSER,text:match("^(%d+)$"))  
+tahadevIRAQ:incrby(DEVIRAQ..'user:messages:'..msg.chat_id_..':'..GET_IDUSER,text:match("^(%d+)$"))  
 
 end
 tahadevIRAQ:del(DEVIRAQ.."SETEX:MSG"..msg.chat_id_..""..msg.sender_user_id_)  
