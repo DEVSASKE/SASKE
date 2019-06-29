@@ -8541,25 +8541,25 @@ end,nil)
 end 
 local function GET_TEXT(msg)
 if chat_type == 'super' then 
-if text == ''..(tahadevIRAQ:get(DEVIRAQ..'SMALE:GAME'..msg.chat_id_) or '')..'' and not tahadevIRAQ:get(DEVIRAQ..'SMALE:GAMES'..msg.chat_id_) then
-tahadevIRAQ:incrby(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
-tahadevIRAQ:set(DEVIRAQ..'SMALE:GAMES'..msg.chat_id_,true)
-NUMPGAME = (tahadevIRAQ:get(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_))
-IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'*🎊¦ مبروك فزت 🍂\n🎁¦ اصبح عدد نقودك » { '..NUMPGAME..' }\n🎭¦* للعب مره اخرى ارسل `الاسرع` \n', 1, 'md')
+if text == ''..(tahadevIRAQ:get(DEVIRAQ..'SMALE:IRAQ'..msg.chat_id_) or '')..'' and not tahadevIRAQ:get(DEVIRAQ..'SMALE:IRAQ'..msg.chat_id_) then
+tahadevIRAQ:incrby(DEVIRAQ..'NUM:IRAQ'..msg.chat_id_..msg.sender_user_id_, 1)  
+tahadevIRAQ:set(DEVIRAQ..'SMALE:IRAQ'..msg.chat_id_,true)
+NUMPIRAQ = (tahadevIRAQ:get(DEVIRAQ..'NUM:IRAQ'..msg.chat_id_..msg.sender_user_id_))
+IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'*🎊¦ مبروك فزت 🍂\n🎁¦ اصبح عدد نقودك » { '..NUMPIRAQ..' }\n🎭¦* للعب مره اخرى ارسل `الاسرع` \n', 1, 'md')
 end 
 
 if text == ''..(tahadevIRAQ:get(DEVIRAQ..'CHEK:CHER'..msg.chat_id_) or '')..'' and not tahadevIRAQ:get(DEVIRAQ..'RTEP:CHER'..msg.chat_id_) then
-tahadevIRAQ:incrby(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
+tahadevIRAQ:incrby(DEVIRAQ..'NUM:IRAQ'..msg.chat_id_..msg.sender_user_id_, 1)  
 tahadevIRAQ:set(DEVIRAQ..'RTEP:CHER'..msg.chat_id_,true)
-NUMPGAME = (tahadevIRAQ:get(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_))
-IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'*🎊¦ مبروك فزت 🍂\n🎁¦ اصبح عدد نقودك » { '..NUMPGAME..' }\n🎭¦* للعب مره اخرى ارسل `معاني` \n', 1, 'md')
+NUMPIRAQ = (tahadevIRAQ:get(DEVIRAQ..'NUM:IRAQ'..msg.chat_id_..msg.sender_user_id_))
+IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'*🎊¦ مبروك فزت 🍂\n🎁¦ اصبح عدد نقودك » { '..NUMPIRAQ..' }\n🎭¦* للعب مره اخرى ارسل `معاني` \n', 1, 'md')
 end 
 
-if text == ''..(tahadevIRAQ:get(DEVIRAQ..'klmo'..msg.chat_id_) or 'لفاتع')..'' and not tahadevIRAQ:get(DEVIRAQ..'CHER:GAME'..msg.chat_id_) then
-tahadevIRAQ:incrby(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
-tahadevIRAQ:set(DEVIRAQ..'CHER:GAME'..msg.chat_id_,true)
-NUMPGAME = (tahadevIRAQ:get(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_) or 0)
-IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'*🎊¦ مبروك فزت 🍂\n🎁¦ اصبح عدد نقودك » { '..NUMPGAME..' }\n🎭¦* للعب مره اخرى ارسل `ترتيب` \n', 1, 'md')
+if text == ''..(tahadevIRAQ:get(DEVIRAQ..'klmo'..msg.chat_id_) or 'لفاتع')..'' and not tahadevIRAQ:get(DEVIRAQ..'CHER:IRAQ'..msg.chat_id_) then
+tahadevIRAQ:incrby(DEVIRAQ..'NUM:IRAQ'..msg.chat_id_..msg.sender_user_id_, 1)  
+tahadevIRAQ:set(DEVIRAQ..'CHER:IRAQ'..msg.chat_id_,true)
+NUMPGAME = (tahadevIRAQ:get(DEVIRAQ..'NUM:IRAQ'..msg.chat_id_..msg.sender_user_id_) or 0)
+IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'*🎊¦ مبروك فزت 🍂\n🎁¦ اصبح عدد نقودك » { '..NUMPIRAQ..' }\n🎭¦* للعب مره اخرى ارسل `ترتيب` \n', 1, 'md')
 end 
 
 if tahadevIRAQ:get(DEVIRAQ.."SETEX:MSG"..msg.chat_id_..""..msg.sender_user_id_) then 
@@ -8600,18 +8600,18 @@ local NUM = text:match("^(%d+)$")
 if tonumber(NUM) > 6 then
 IRAQ_sendMsg( msg.chat_id_, msg.id_, 1,"*📬¦ عذرا لا يوجد سواء { 6 } اختيارات فقط ارسل اختيارك مره اخره*\n", 1, "md")    
 return false  end 
-local GETNUM = tahadevIRAQ:get(DEVIRAQ.."GAMES"..msg.chat_id_)
+local GETNUM = tahadevIRAQ:get(DEVIRAQ.."IRAQ"..msg.chat_id_)
 if tonumber(NUM) == tonumber(GETNUM) then
-tahadevIRAQ:del(DEVIRAQ.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
+tahadevIRAQ:del(DEVIRAQ.."SET:IRAQ" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
 IRAQ_sendMsg( msg.chat_id_, msg.id_, 1,'*📮¦ مبروك فزت وطلعت المحيبس بل ايد رقم { '..NUM..' }\n🎊¦ لقد حصلت على { 3 }من نقاط يمكنك استبدالهن برسائل *', 1, "md")    
 tahadevIRAQ:incrby(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_,3)  
 elseif tonumber(NUM) ~= tonumber(GETNUM) then
-tahadevIRAQ:del(DEVIRAQ.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
+tahadevIRAQ:del(DEVIRAQ.."SET:IRAQ" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
 IRAQ_sendMsg( msg.chat_id_, msg.id_, 1,'\n*📮¦ للاسف لقد خسرت \n📬¦ المحيبس بل ايد رقم { '..GETNUM..' }\n💥¦ حاول مره اخرى للعثور على المحيبس *', 1, "md")    
 end
 end
 end
-if tahadevIRAQ:get(DEVIRAQ.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then  
+if tahadevIRAQ:get(DEVIRAQ.."IRAQ:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then  
 if text and text:match("^(%d+)$") then
 local NUM = text:match("^(%d+)$")
 if tonumber(NUM) > 20 then
@@ -8620,14 +8620,14 @@ return false  end
 local GETNUM = tahadevIRAQ:get(DEVIRAQ.."GAMES:NUM"..msg.chat_id_)
 if tonumber(NUM) == tonumber(GETNUM) then
 tahadevIRAQ:del(DEVIRAQ..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)
-tahadevIRAQ:del(DEVIRAQ.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
-tahadevIRAQ:incrby(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_,5)  
+tahadevIRAQ:del(DEVIRAQ.."IRAQ:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
+tahadevIRAQ:incrby(DEVIRAQ..'NUM:IRAQ'..msg.chat_id_..msg.sender_user_id_,5)  
 IRAQ_sendMsg( msg.chat_id_, msg.id_, 1,'*🔖¦ مبروك فزت ويانه وخمنت الرقم الصحيح\n🚸¦ تم اضافة { 5 } من النقاط *\n', 1, "md")    
 elseif tonumber(NUM) ~= tonumber(GETNUM) then
 tahadevIRAQ:incrby(DEVIRAQ..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_,1)
 if tonumber(tahadevIRAQ:get(DEVIRAQ..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)) >= 3 then
 tahadevIRAQ:del(DEVIRAQ..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)
-tahadevIRAQ:del(DEVIRAQ.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
+tahadevIRAQ:del(DEVIRAQ.."IRAQ:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
 IRAQ_sendMsg( msg.chat_id_, msg.id_, 1,'\n*📮¦ اوبس لقد خسرت في اللعبه \n📬¦ حظآ اوفر في المره القادمه \n🔰¦ كان الرقم الذي تم تخمينه { '..GETNUM..' }\n*', 1, "md")    
 else
 IRAQ_sendMsg( msg.chat_id_, msg.id_, 1,'\n*📛¦ اوبس تخمينك غلط \n📌¦ ارسل رقم تخمنه مره اخره \n*', 1, "md")    
@@ -8639,11 +8639,11 @@ end
 end
 end
 
-local function GAMES(msg, MSG_TEXT)
+local functionIRAQ(msg, MSG_TEXT)
 if chat_type == 'super' then 
 if MSG_TEXT[1] == 'محيبس' or MSG_TEXT[1] == 'بات' then   
 Num = math.random(1,6)
-tahadevIRAQ:set(DEVIRAQ.."GAMES"..msg.chat_id_,Num) 
+tahadevIRAQ:set(DEVIRAQ.."IRAQ"..msg.chat_id_,Num) 
 TEST = [[
 *➀       ➁     ➂      ➃      ➄     ➅
 ↓      ↓     ↓      ↓     ↓     ↓
@@ -8668,11 +8668,11 @@ end
 if MSG_TEXT[1] == 'الاسرع' and not tahadevIRAQ:get(DEVIRAQ.."LOCK:GAMES"..msg.chat_id_) then 
 tahadevIRAQ:del(DEVIRAQ..'SMALE:GAMES'..msg.chat_id_)
 katu = {'🍏','🍎','843578','9755','25677','578866','14589','🍐','🍊','🍋','🍌','🍉','🍇','🍓','🍈','🍒','🍑','🍍','🥥','🥝','🍅','🍆','🥑','🥦','🥒','🌶','🌽','🥕','🥔','🍠','🥐','🍞','🥖','🥨','🧀','🥚','🍳','🥞','🥓','🥩','🍗','🍖','🌭','🍔','🍟','🍕','🥪','🥙','🍼','☕️','🍵','🥤','🍶','🍺','🍻','🏀','⚽️','🏈','⚾️','🎾','🏐','🏉','🎱','🏓','🏸','🥅','🎰','🎮','🎳','🎯','🎲','🎻','🎸','🎺','🥁','🎹','🎼','🎧','🎤','🎬','🎨','🎭','🎪','🎟','🎫','🎗','🏵','🎖','🏆','🥌','🛷','🚕','7643','93289','3457','95439','378865','24568','9976','289','2288','2854','🚗','🚙','🚌','🚎','🏎','🚓','🚑','🚚','🚛','🚜','🇮🇶','⚔','🛡','🔮','🌡','💣','📌','📍','📓','📗','📂','📅','📪','📫','📬','📭','⏰','📺','🎚','☎️','📡'}
-tahadevIRAQ:set(DEVIRAQ..'SMALE:GAME'..msg.chat_id_,katu[math.random(#katu)])
-IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'اسرع واحد يدز هذهہٓ ››  `'..tahadevIRAQ:get(DEVIRAQ..'SMALE:GAME'..msg.chat_id_)..'`', 1, 'md')
+tahadevIRAQ:set(DEVIRAQ..'SMALE:IRAQ'..msg.chat_id_,katu[math.random(#katu)])
+IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'اسرع واحد يدز هذهہٓ ››  `'..tahadevIRAQ:get(DEVIRAQ..'SMALE:'IRAQ'..msg.chat_id_)..'`', 1, 'md')
 end
 
-if MSG_TEXT[1] == 'معاني' and not tahadevIRAQ:get(DEVIRAQ.."LOCK:GAMES"..msg.chat_id_) then 
+if MSG_TEXT[1] == 'معاني' and not tahadevIRAQ:get(DEVIRAQ.."LOCK:"IRAQ"..msg.chat_id_) then 
 tahadevIRAQ:del(DEVIRAQ..'RTEP:CHER'..msg.chat_id_)
 katu = {'قرد','دجاجه','بطريق','ضفدع','بومه','نحله','ديج','جمل','بقره','دولفين','تمساح','قرش','نمر','اخطبوط','سمكه','خفاش','اسد','فأر','ذئب','فراشه','عقرب','زرافه','قنفذ','تفاحه','باذنجان'}
 name = katu[math.random(#katu)]
@@ -8705,8 +8705,8 @@ name = string.gsub(name,'باذنجان','🍆')
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'اسرع واحد يدز معنى السمايل يفوز » { '..name..' }', 1, 'md')
 end
 
-if MSG_TEXT[1] == 'ترتيب' and not tahadevIRAQ:get(DEVIRAQ.."LOCK:GAMES"..msg.chat_id_) then 
-tahadevIRAQ:del(DEVIRAQ..'CHER:GAME'..msg.chat_id_)
+if MSG_TEXT[1] == 'ترتيب' and not tahadevIRAQ:get(DEVIRAQ.."LOCK:"IRAQ"..msg.chat_id_) then 
+tahadevIRAQ:del(DEVIRAQ..'CHER:'IRAQ'..msg.chat_id_)
 katu = {'سحور','سياره','استقبال','قنفه','ايفون','بزونه','مطبخ','كرستيانو','دجاجه','مدرسه','الوان','غرفه','ثلاجه','كهوه','سفينه','العراق','محطه','طياره','رادار','منزل','مستشفى','كهرباء','تفاحه','اخطبوط','سلمون','فرنسا','برتقاله','تفاح','مطرقه','بتيته','لهانه','شباك','باص','سمكه','ذباب','تلفاز','حاسوب','انترنيت','ساحه','جسر'};
 name = katu[math.random(#katu)]
 tahadevIRAQ:set(DEVIRAQ..'klmo'..msg.chat_id_,name)
@@ -8754,10 +8754,10 @@ IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'*💥¦ اسرع واحد يرتب هاي
 end
 
 if MSG_TEXT[1] =='نقودي' then 
-if tonumber((tahadevIRAQ:get(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
+if tonumber((tahadevIRAQ:get(DEVIRAQ..'NUM:'IRAQ'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, ' *💬¦ ليس لديك نقود ،\n📬¦ للحصول ؏ النقود ،\n📮¦ ارسل الالعاب وابدأ اللعب ! *', 1, 'md') 
 else
-NUMPGAME = (tahadevIRAQ:get(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_))
+NUMPGAME = (tahadevIRAQ:get(DEVIRAQ..'NUM:'IRAQ'..msg.chat_id_..msg.sender_user_id_))
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'*📮¦ عدد النقود التي ربحتها هي » { '..NUMPGAME..' }\n📬¦ تسطيع بيع نقودك ولحصول على (50) رساله مقابل كل نقطه من النقود *\n', 1, 'md') 
 end
 end
@@ -8771,11 +8771,11 @@ if tonumber(tahadevIRAQ:get(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'\n*📮¦ ليس لديك نقود من الالعاب \n📬¦ اذا كنت تريد ربح النقود \n🎮¦ ارسل الالعاب وابدأ اللعب ! *', 1, 'md') 
 else
 local NUM_GAMES = tahadevIRAQ:get(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_)
-if tonumber(NUMPY) > tonumber(NUM_GAMES) then
+if tonumber(NUMPY) > tonumber(NUM_IRAQ) then
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'\n*📮¦ ليس لديك نقود بهاذا العدد \n📬¦ لزيادة نقودك في اللعبه \n🎮¦ ارسل الالعاب وابدأ اللعب ! *', 1, 'md') 
 return false end
 local NUMNKO = (NUMPY * 50)
-tahadevIRAQ:decrby(DEVIRAQ..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_,NUMPY)  
+tahadevIRAQ:decrby(DEVIRAQ..'NUM:'IRAQ'..msg.chat_id_..msg.sender_user_id_,NUMPY)  
 tahadevIRAQ:incrby(DEVIRAQ..'user:messages:'..msg.chat_id_..':'..msg.sender_user_id_,NUMNKO)  
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'\n*📬¦ تم خصم » { '..NUMPY..' } من نقودك \n📨¦ وتم اضافة » { '..(NUMPY * 50)..' } رساله الى رسالك *\n💥', 1, 'md')
 end return false 
@@ -8785,7 +8785,7 @@ if MSG_TEXT[1] == 'تفعيل الالعاب' or MSG_TEXT[1] == 'تفعيل ال
 if not is_monsh(msg) then   
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,"\n*📮¦ هاذا الامر خاص للمدراء فما فوق\n*", 1, 'md') 
 return false  end 
-if tahadevIRAQ:get(DEVIRAQ..'LOCK:GAMES'..msg.chat_id_) then
+if tahadevIRAQ:get(DEVIRAQ..'LOCK:'IRAQ'..msg.chat_id_) then
 taha = '*📮¦ تم تفعيل الالعاب في المجموعه *\n✓' 
 IRAQ_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 tahadevIRAQ:del(DEVIRAQ..'LOCK:GAMES'..msg.chat_id_) 
@@ -8799,7 +8799,7 @@ if MSG_TEXT[1] == 'تعطيل الالعاب' or MSG_TEXT[1] == 'تعطيل ال
 if not is_monsh(msg) then   
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,"\n*📮¦ هاذا الامر خاص للمدراء فما فوق\n*", 1, 'md') 
 return false  end 
-if not tahadevIRAQ:get(DEVIRAQ..'LOCK:GAMES'..msg.chat_id_) then
+if not tahadevIRAQ:get(DEVIRAQ..'LOCK:'IRAQ'..msg.chat_id_) then
 taha = '*📮¦ تم تعطيل الالعاب في المجموعه *\n✓' 
 IRAQ_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 tahadevIRAQ:set(DEVIRAQ..'LOCK:GAMES'..msg.chat_id_,true) 
@@ -8829,10 +8829,10 @@ IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,'*📊¦ ارسل لي عدد النقاط
 end
 
 if MSG_TEXT[1] == 'الالعاب' or MSG_TEXT[1] == 'اللعبه' then
-if tahadevIRAQ:get(DEVIRAQ.."LOCK:GAMES"..msg.chat_id_) then 
+if tahadevIRAQ:get(DEVIRAQ.."LOCK:"IRAQ"..msg.chat_id_) then 
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,"\n*📮¦ الالعاب تم تعطيلها هنا \n*", 1, 'md') 
 else
-local COMGAME = [[*
+local COMIRAQ = [[
 🤹‍♂¦ اهلا بك في قائمه الالعاب
 📮¦ العآب الپوت المتآحة حاليا ↓
 ٴ━━━━━━━━━━
@@ -8841,9 +8841,9 @@ local COMGAME = [[*
 💭¦ معاني السمايلات ارسل › معاني
 🗳¦ لعبة المحيبس ارسل › بات
 🔖¦ لعبة التخمين ارسل › خمن
-*
-IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,COMGAME, 1, 'md') 
---]]  
+]]
+IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,COMIRAQ, 1, 'md') 
+]] 
 end
 end
 
