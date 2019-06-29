@@ -8539,7 +8539,6 @@ IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, taha, 1, 'md')
 end,nil)
 end,nil)
 end 
---[[
 local function GET_TEXT(msg)
 if chat_type == 'super' then 
 if text == ''..(tahadevIRAQ:get(DEVIRAQ..'SMALE:GAME'..msg.chat_id_) or '')..'' and not tahadevIRAQ:get(DEVIRAQ..'SMALE:GAMES'..msg.chat_id_) then
