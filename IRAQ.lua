@@ -2001,11 +2001,9 @@ if text == "تحديث السورس 🔱" and is_devtaha(msg) then  IRAQ_sendMsg
 os.execute('rm -rf IRAQ.lua') 
 os.execute("rm -fr plugins_/help_rep.lua")
 os.execute("rm -fr plugins_/ZHRFA.lua")
-os.execute("rm -fr plugins_/games.lua")
 os.execute('wget https://raw.githubusercontent.com/sorues/IRAQ/master/IRAQ.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/help_rep.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/ZHRFA.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/games.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/ZHRFA.lua')  
 sleep(0.5) 
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, '🚸*¦* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('IRAQ.lua')  
@@ -4238,11 +4236,9 @@ IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, '♻ • جاري تحديث السورس
 os.execute('rm -rf IRAQ.lua') 
 os.execute("rm -fr plugins_/help_rep.lua")
 os.execute("rm -fr plugins_/ZHRFA.lua")
-os.execute("rm -fr plugins_/games.lua")
 os.execute('wget https://raw.githubusercontent.com/sorues/IRAQ/master/IRAQ.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/help_rep.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/ZHRFA.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/games.lua') 
 sleep(0.5) 
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, '🚸*¦* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('IRAQ.lua')  
@@ -8544,7 +8540,6 @@ end,nil)
 end,nil)
 end 
 --[[
---]]
 local function GET_TEXT(msg)
 if chat_type == 'super' then 
 if text == ''..(tahadevIRAQ:get(DEVIRAQ..'SMALE:GAME'..msg.chat_id_) or '')..'' and not tahadevIRAQ:get(DEVIRAQ..'SMALE:GAMES'..msg.chat_id_) then
@@ -8848,8 +8843,8 @@ local COMGAME = [[*
 🗳¦ لعبة المحيبس ارسل › بات
 🔖¦ لعبة التخمين ارسل › خمن
 *
-]]
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,COMGAME, 1, 'md') 
+--]]  
 end
 end
 
