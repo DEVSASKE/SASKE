@@ -2002,10 +2002,10 @@ os.execute('rm -rf IRAQ.lua')
 os.execute("rm -fr plugins_/help_rep.lua")
 os.execute("rm -fr plugins_/ZHRFA.lua")
 os.execute("rm -fr plugins_/games.lua")
-os.execute('wget https://raw.githubusercontent.com/surse/iraq/master/IRAQ.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/help_rep.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/ZHRFA.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/games.lua') 
+os.execute('wget https://raw.githubusercontent.com/DEVSASKE/SASKE/master/IRAQ.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/DEVSASKE/SASKE/master/plugins_/help_rep.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/DEVSASKE/SASKE/master/plugins_/ZHRFA.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/DEVSASKE/SASKE/master/plugins_/games.lua') 
 sleep(0.5) 
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, '🚸*¦* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('IRAQ.lua')  
@@ -4239,10 +4239,10 @@ os.execute('rm -rf IRAQ.lua')
 os.execute("rm -fr plugins_/help_rep.lua")
 os.execute("rm -fr plugins_/ZHRFA.lua")
 os.execute("rm -fr plugins_/games.lua")
-os.execute('wget https://raw.githubusercontent.com/sorues/IRAQ/master/IRAQ.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/help_rep.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/ZHRFA.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/games.lua') 
+os.execute('wget https://raw.githubusercontent.com/DEVSASKE/SASKE/master/IRAQ.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/DEVSASKE/SASKE/master/plugins_/help_rep.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/DEVSASKE/SASKE/master/plugins_/ZHRFA.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/DEVSASKE/SASKE/master/plugins_/games.lua') 
 sleep(0.5) 
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, '🚸*¦* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('IRAQ.lua')  
@@ -4305,7 +4305,7 @@ end
 return false  end
 if kk.id_ then  
 local msgss = tonumber(IRAQBOT:get(IRAQ_ID..'user:messages:'..msg.chat_id_..':'..kk.id_) or 0)  
-if tonumber(kk.id_) == tonumber(373906612) then
+if tonumber(kk.id_) == tonumber(773664597) then
 t = 'مطور السورس'
 elseif tonumber(kk.id_) == tonumber(bot_id) then
 t = 'هاذا بوت'
@@ -4390,7 +4390,7 @@ end
 if text and text:match('كشف (%d+)') then 
 local iduser = text:match('كشف (%d+)')  
 local msgss = tonumber(IRAQBOT:get(IRAQ_ID..'user:messages:'..msg.chat_id_..':'..iduser) or 0)  
-if tonumber(iduser) == tonumber(373906612) then
+if tonumber(iduser) == tonumber(773664597) then
 t = 'مطور السورس'
 elseif tonumber(iduser) == tonumber(bot_id) then
 t = 'هاذا البوت'
@@ -4495,7 +4495,7 @@ end
 if text ==("كشف") and msg.reply_to_message_id_ ~= 0 then  
 function id_by_reply(extra, result, success) 
 local msgss = tonumber(IRAQBOT:get(IRAQ_ID..'user:messages:'..msg.chat_id_..':'..result.sender_user_id_) or 0)  
-if tonumber(result.sender_user_id_) == tonumber(373906612) then
+if tonumber(result.sender_user_id_) == tonumber(773664597) then
 t = 'مطور السورس'
 elseif tonumber(result.sender_user_id_) == tonumber(bot_id) then
 t = 'هاذا البوت'
@@ -4602,7 +4602,7 @@ if not text:find('@') then
 function mention(extra, tes, success)
 if tes.content_.entities_[0].user_id_ then  
 local msgss = tonumber(IRAQBOT:get(IRAQ_ID..'user:messages:'..msg.chat_id_..':'..tes.content_.entities_[0].user_id_) or 0)  
-if tonumber(tes.content_.entities_[0].user_id_) == tonumber(373906612) then
+if tonumber(tes.content_.entities_[0].user_id_) == tonumber(773664597) then
 t = 'مطور السورس'
 elseif tonumber(tes.content_.entities_[0].user_id_) == tonumber(bot_id) then
 t = 'هاذا بوت'
@@ -4875,17 +4875,17 @@ end
 end
 if text == 'السورس' or text =='سورس' or text=='يا سورس' then
 local text = [[ 
-🎫┇اهلا بك في سورس عراق 🇮🇶┇
+🎫┇اهلا بك في سورس ساسكي
 
-🇮🇶┇[المطور](t.me/Ha_ssin) 
+🇮🇶┇[المطور](t.me/A44_AA) 
 
-☑️┇[قناه السورس](t.me/Ha_ssin2)
+☑️┇[قناه السورس](t.me/RRTTT)
 
-🔘┇[قناه شروحات سورس📍](t.me/Ha_ssin3) 
+🔘┇[قناه شروحات سورس📍](t.me/RRTTT) 
 
-🔖┇ [لـ تنصيب سورس عراق☑️](t.me/Ha_ssin3) 
+🔖┇ [لـ تنصيب سورس عراق☑️](t.me/RRTTT) 
 
-📮┇[لـ تواصل📩](t.me/Twaselto_bot) 
+📮┇[لـ تواصل📩](t.me/A44_AA) 
 ]] 
 IRAQ_sendMsg(msg.chat_id_, msg.id_, 1,text, 1, 'md')   
 end
@@ -9056,7 +9056,7 @@ rtpa = 'الادمن'
 elseif da.status_.ID == "ChatMemberStatusMember" then
 rtpa = 'عضو'
 end
-if tonumber(msg.sender_user_id_) == tonumber(373906612) then
+if tonumber(msg.sender_user_id_) == tonumber(773664597) then
 t = 'مطور السورس 🔱'
 elseif tonumber(msg.sender_user_id_) == tonumber(SUDO) then
 t = 'مطور اساسي 🍃'
@@ -10439,21 +10439,21 @@ tdcli_function ({   ID = "GetMessage", chat_id_ = data.chat_id_,   message_id_ =
 elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then  
 local filess = io.open("plugins_/help_rep.lua","r")
 if not filess then
-os.execute('cd plugins_ ;wget https://raw.githubusercontent.com/sorues/IRAQ/master/plugins_/help_rep.lua')
+os.execute('cd plugins_ ;wget https://raw.githubusercontent.com/DEVSASKE/SASKE/master/plugins_/help_rep.lua')
 end
 local filess = io.open("requfiles/JSON.lua","r")
 if not filess then
-os.execute('cd requfiles ;wget https://raw.githubusercontent.com/sorues/IRAQ/master/requfiles/JSON.lua') 
+os.execute('cd requfiles ;wget https://raw.githubusercontent.com/DEVSASKE/SASKE/master/requfiles/JSON.lua') 
 dofile('IRAQ.lua')  
 end
 local filess = io.open("requfiles/dkjson.lua","r")
 if not filess then
-os.execute('cd requfiles ;wget https://raw.githubusercontent.com/sorues/IRAQ/master/requfiles/dkjson.lua') 
+os.execute('cd requfiles ;wget https://raw.githubusercontent.com/DEVSASKE/SASKE/master/requfiles/dkjson.lua') 
 dofile('IRAQ.lua')  
 end
 local filess = io.open("requfiles/serpent.lua","r")
 if not filess then
-os.execute('cd requfiles ;wget https://raw.githubusercontent.com/sorues/IRAQ/master/requfiles/serpent.lua') 
+os.execute('cd requfiles ;wget https://raw.githubusercontent.com/DEVSASKE/SASKE/master/requfiles/serpent.lua') 
 dofile('IRAQ.lua')  
 end
 local list = IRAQBOT:smembers(IRAQ_ID.."usersbot")
